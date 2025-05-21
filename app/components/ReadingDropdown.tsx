@@ -4,14 +4,23 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function ReadingDropdown(props: {
-  title: String | JSX.Element;
-  author: String;
-  content: String | JSX.Element;
+  title: string | JSX.Element;
+  author: string;
+  content: string | JSX.Element;
   image_src: string;
   image_alt: string;
   is_favorite: boolean;
+  targetId: string;
 }) {
-  const { title, author, content, image_src, image_alt, is_favorite } = props;
+  const {
+    title,
+    author,
+    content,
+    image_src,
+    image_alt,
+    is_favorite,
+    targetId,
+  } = props;
 
   const router = useRouter();
 
@@ -26,9 +35,17 @@ export default function ReadingDropdown(props: {
           onClick={() => {
             setActive(!isActive);
             if (!isActive) {
-              router.push("#" + title);
-            } else {
-              router.push("");
+              setTimeout(() => {
+                router.push("#" + targetId, { scroll: false });
+
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                  targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }, 1);
             }
           }}
         >

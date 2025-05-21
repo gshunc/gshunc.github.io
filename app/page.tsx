@@ -1,32 +1,19 @@
 "use client";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import Image from "next/image";
+import Link from "next/link";
 config.autoAddCss = false;
 
 export default function Home() {
   return (
-    <div className="lg:ml-40 lg:mr-40 mr-5 ml-5 flex flex-col lg:block lg:ml-0 lg:mt-5 scroll-auto lg:mr-20 pb-5 pt-20">
-      <div className="flex lg:flex-row flex-col w-fit">
-        <Image
-          src="/harris_george_photo.jpg"
-          alt="Portrait Image of George Harris"
-          height={300}
-          width={300}
-          quality={100}
-          className="w-48 h-48 border-8 mt-5 lg:mt-10 rounded border-black self-center lg:self-start"
-        ></Image>
-        <div className="self-end ml-10 w-fit font-semibold text-4xl mt-10 mb-5 pb-5">
-          George Harris.
-        </div>
+    <div className="lg:ml-20 lg:mr-20 mr-5 ml-5 flex flex-col lg:block lg:ml-0 lg:mt-5 scroll-auto lg:mr-20 pb-5 pt-20">
+      <div className="self-end w-fit font-semibold text-3xl">
+        George Harris.
       </div>
-
-      <p className="text-xl text-center lg:text-left mt-10 mb-5 w-50">
-        {"I study computer science, math and statistics at "}
-        <span className="font-extrabold text-sky-300">
-          {"UNC Chapel Hill"}
-        </span>{" "}
-        {"(Go Heels! 🐏), I'm originally from "}
+      <p className="text-lg text-center lg:text-left mt-5 mb-5 w-50">
+        {"I study computer science and math at "}
+        <span className="font-extrabold text-sky-300">{"UNC Chapel Hill"}</span>
+        {". I'm originally from "}
         <span className="font-extrabold text-red-500">{"St. Louis, MO"}</span>
         {
           ", and have a professional passion for tech and social good, AI research, and entrepreneurship. Outside of that, I'm interested in "
@@ -43,7 +30,7 @@ export default function Home() {
         {", "}
         <span className="font-bold text-violet-700"> {"fitness"}</span>
         {", and"}
-        <span className="font-bold text-yellow-300"> {"singing"}</span>
+        <span className="font-bold text-yellow-400"> {"singing"}</span>
         {". Learn more about me on the "}
         <a href="/my-story" className="font-extrabold underline group">
           {"My Story"}
@@ -53,7 +40,7 @@ export default function Home() {
         </a>
         {" page."}
       </p>
-      <p className="text-center lg:text-left text-xl mt-10 mb-5 w-50">
+      <p className="text-center lg:text-left text-lg mt-10 mb-5 w-50">
         {
           "As I briefly outlined above, I'm professionally, but also personally, interested in many aspects of tech, especially in entrepreneurship and innovation. I am at my best when I am a part of or leading a high-functioning team, but I also like to build on my own. You can take a deeper dive into what I'm working on in the "
         }
@@ -66,6 +53,63 @@ export default function Home() {
 
         {" page."}
       </p>
+      <div className="text-center lg:text-left text-lg mt-10 mb-5 w-50">
+        <p className="font-extrabold mb-1">{"Recently:"}</p>
+        <ul>
+          <li>
+            <span className="font-semibold">
+              swe intern @ <span className="text-green-500">MongoDB</span>{" "}
+              (summer 2025, new york city)
+            </span>
+            &rarr; working on infra + experimentation tools. if you're in NYC
+            hit me up.
+          </li>
+          <li>
+            <span className="font-semibold">
+              research @{" "}
+              <span className="text-blue-500">
+                UNC Embedded Intelligence Lab
+              </span>
+            </span>{" "}
+            &rarr; deep learning + wifi signal analysis; presented agent-based
+            LLM work at Sensys 2025 (CPS-IoT Week).
+          </li>
+          <li>
+            <span className="font-semibold">
+              president (fmr vp of education) @{" "}
+              <span className="text-teal-400">UNC CS + Social Good</span>
+            </span>{" "}
+            &rarr; overhauled and taught dev curriculum to new students and org
+            members, shaped org's technical and strategic direction closely with
+            presidents.
+          </li>
+          <li>
+            <span className="font-semibold">
+              co-founded a <span className="text-yellow-400">band</span> +
+              performing locally
+            </span>{" "}
+            &rarr; singing vocals for “Pollen”, started with my close friends;
+            done a few small shows, one of the most meaningful parts of life rn.
+          </li>
+          <li>
+            <span className="font-semibold">
+              spent last fall abroad in{" "}
+              <span className="text-red-500">Madrid</span> @ UC3M
+            </span>{" "}
+            &rarr; somehow passed all my cs + math classes. lived in a student
+            res w/ communal kitchen; cooked for friends, hit 8 countries, too
+            many clubs, learned some spanish.
+          </li>
+          <li>
+            <span className="font-semibold">trying to read and write more</span>{" "}
+            &rarr; check out my{" "}
+            <Link className="underline" href="/reading-list">
+              reading list
+            </Link>
+            . reading mostly about philosophy, history, and math.
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

@@ -27,14 +27,14 @@ const routes = [
     fa: faGithub,
   },
   {
-    name: "Projects",
-    message: "Check out my Projects and other pursuits!",
+    name: "Pursuits",
+    message: "Check out what I have going on.",
     href: "/projects",
     isReferrer: false,
     fa: faCode,
   },
   {
-    name: "Story",
+    name: "About Me",
     message: "Learn what makes me, me!",
     href: "/my-story",
     isReferrer: false,

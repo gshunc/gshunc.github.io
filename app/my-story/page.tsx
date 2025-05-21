@@ -9,15 +9,11 @@ const story_page = () => {
   return (
     <main className="flex min-h-full flex-col ml-5 mr-5 lg:items-start lg:mr-20 lg:ml-0 lg:mt-10">
       <p className="text-2xl lg:text-5xl font-semibold underline mt-5">
-        My Story
-      </p>
-
-      <p className="text-xl mt-5 lg:text-3xl underline lg:mt-10">
-        How Things Started
+        Who am I?
       </p>
       <p className="mt-5 mb-10">
         {
-          "I was born October 15th, 2003 in St. Louis, Missouri to two loving parents. I attended King of Kings Preschool, followed by River Bend Elementary, Pierremont Elementary MOSAIC Gifted Academy, and Parkway Central Middle and High School. In High School, I was involved in a number of organizations, serving as Senior Class President and Varsity Swim Captain, as well as Secretary of Coding Colts. I had the opportunity to give our Graduation Speech, pictured below."
+          "I was born October 15th, 2003 in St. Louis, Missouri. I proceeded to grow up a lot (still working on this). I attended Parkway Central High School, where I was involved in a number of organizations (mostly after realizing I should do this for college), serving as Senior Class President and Swim Captain, as well as Secretary of Coding Colts. I had the opportunity to give our Graduation Speech, pictured below."
         }
       </p>
       <Story_Image
@@ -28,40 +24,39 @@ const story_page = () => {
       <p className="text-3xl underline mt-10">My Interests</p>
       <p className="mt-5">
         {
-          " As listed on the home page, some of my interests include history, politics, cooking, college basketball, singing, fitness, and the environment. I want to talk a little about each, here."
+          " As listed on the home page, some of my interests include history, philosophy, cooking, college basketball, singing, and fitness. I want to talk a little about each, here."
         }
       </p>
 
-      <p className={`text-xl mt-10`}>-&gt; History and Politics</p>
+      <p className={`text-xl mt-10`}>-&gt; History and Philosophy</p>
       <div className="lg:ml-10">
         <p className="mt-5">
           {
-            "In applying to college, I almost decided to apply as a Political Science major with the intent to enter into Law School following undergrad. Even as I entered college and began to take courses under my Computer Science major, I contemplated switching my major to Political Science and History and pursuing the same goal. While I was and am extremely passionate for technology and the tools it can unlock in innovation and entrepreneurship, politics and history was such a strong personal passion of mine that it almost drew me away."
+            "When I applied to college, I almost decided to apply as a Political Science major with the intent to enter into Law School. Even while entering college and taking courses under my Computer Science major, I contemplated switching my major to Economics and History and pursuing that goal. While I was and am extremely passionate for technology and the tools it can unlock through innovation and entrepreneurship, politics and history was such a strong personal passion of mine that it almost drew me away."
           }
         </p>
         <p className="mt-5">
           {
-            "In grade school, History and Social Studies was always my favorite subject, mostly because it didn't feel like I was doing school, but moreso pursing a passion. At the same time that I was learning interesting new history, I was engaging my writing and communication skills and working on memory. For me, History was the whole package."
+            "In grade school, History and Social Studies was always my favorite subject, mostly because it didn't feel like I was grinding away at it. At the same time that I was learning interesting new history, I was engaging my writing and communication skills and working on memorization. For me, History was the whole package."
           }
         </p>
         <p className="mt-5">
           {
-            'Nowadays, this educational passion has morphed into a personal passion, where I often find myself watching documentaries, reading random historical wikipedia articles, and listening to podcasts. Right now, my favorite historical podcast is one of the classics: "History of Rome", by Mike Duncan.'
+            "Nowadays, this educational passion has morphed into a personal passion, where I often find myself reading random historical wikipedia articles, and listening to podcasts. Part of me still wants to take more courses in philosophy and history..."
           }
         </p>
-        <Spotify_IFrame />
       </div>
 
       <p className="text-xl mt-10">-&gt; Cooking</p>
       <div className="lg:ml-10">
         <p className="mt-5">
           {
-            "My interest in cooking was sparked from years of helping my Mom in the kitchen when she needed another hand, which moved into preparing parts of meals on my own, then cooking steaks, and then starting to make my own full meals. The part of cooking I find most fun and fascinating is the science behind it; how every part of cooking a meal is like its own chemical reaction, with technique and ingredients each playing their part in the formula."
+            "My interest in cooking was sparked from years of helping my Mom in the kitchen when she needed another hand, which moved into preparing parts of meals on my own, then cooking steaks, and then starting to make my own full meals. The part of cooking I find most fun and fascinating is the science behind it; how every part of cooking a meal is like its own chemical reaction, with technique and ingredients each playing their part in the formula. At the same time, it's easy to let your mind wander and take your time cooking as an active meditation. Cooking is also a great way to share your passions with others and produce a meal that you can be proud of. Also, good food is delicious so there's that."
           }
         </p>
         <p className="mt-5">
           {
-            'Living in a college dorm has made it hard to keep up with this interest, but whenever I am home, I make sure to get back into the swing of things. I like to prepare my own lunches and sometimes entire meals for special occassions. My most favorite recipe that I have made so far has been Pasta Alla Amatriciana from "Salt Fat Acid Heat" by Samin Nosrat, my '
+            'During my time studying abroad, I was able to try a lot of new foods and cuisines. I also spent my time in a student residence with a communal kitchen where me and my friend Chinmay cooked insane meals, sometimes for multiple of our friends (something I\'m excited to rekindle). Side note, this was one of the best things about Madrid - living within a 2 minute walk of like 3 grocery stores. Shoutout urban living. My favorite recipe that I have made so far has been Pasta Alla Amatriciana from "Salt Fat Acid Heat" by Samin Nosrat, my '
           }
           <Link
             href="https://www.amazon.com/Salt-Fat-Acid-Heat-Mastering/dp/1476753830"
@@ -87,21 +82,6 @@ const story_page = () => {
               alt="Cookbook Cover"
             ></Story_Image>
           </Link>
-        </div>
-      </div>
-
-      <p className="text-xl mt-10">-&gt; Sports</p>
-      <div className="lg:ml-10">
-        <p className="mt-5">
-          {
-            "Being from St. Louis, sports have been an interest of mine for a long time. Growing up, the Cardinals in Baseball were my main team, with a casual interest in the Blues in hockey. Since coming to college, however, UNC sports have taken over. I'm a huge Tar Heel Basketball and Football fan, attending as many games as I can make it to. I'm also a casual fan of the San Francisco 49ers, since  my parents lived in the Bay Area for about a decade."
-          }
-        </p>
-        <div className="flex flex-row justify-evenly self-center lg:pr-10 mt-10">
-          <Story_Image
-            src="/deandome.jpg"
-            alt={"Image of the dean dome at UNC"}
-          ></Story_Image>
         </div>
       </div>
 
@@ -144,7 +124,12 @@ const story_page = () => {
             </span>
           </Link>
 
-          {` at UNC.`}
+          {` at UNC, where I'm on the choir council as tech director.`}
+        </p>
+        <p className="mt-5">
+          {
+            "Junior year of school after getting back from studying abroad, my friends and I started a band called Pollen. We've performed a couple of times and it's one of the best parts of my life."
+          }
         </p>
       </div>
 
@@ -152,13 +137,11 @@ const story_page = () => {
       <div className="lg:ml-10 mb-10">
         <p className="mt-5 pb-20">
           {
-            "In my life, I have played a number of sports. Baseball, swimming, water polo, football, and tennis, to name a few. In High School, I was Varsity Swim Captain, specializing in distance freestyle, and helped lead my team to a conference title. Nowadays, I am not a part of any organized athletic teams, but fitness remains a part of my life through regularly going to the gym, eating healthy, and going on hikes and swims in the summer. I am also a member of UNC's Club Golf team as a part of the non-competitive team. Fitness, health, and wellbeing are a big part of my life and are things that I proritize in many of the decisions I make on a daily basis."
+            "In my life, I have played a number of sports. Baseball, swimming, water polo, football, and tennis, to name a few. In High School, I was Varsity Swim Captain, specializing in distance freestyle, and helped lead my team to a conference title. Nowadays, I am not a part of any organized athletic teams, but fitness remains a part of my life through regularly going to the gym and going on hikes and swims in the summer. I'm also kind of neurotic about healthy eating."
           }
         </p>
       </div>
-      <div className="pb-10 self-end w-container">
-        {"Last updated 01/11/24"}
-      </div>
+      <div className="pb-10 self-end w-container">{`Last updated 5/20/25`}</div>
     </main>
   );
 };
