@@ -61,8 +61,8 @@ export default function Home() {
               swe intern @ <span className="text-green-500">MongoDB</span>{" "}
               (summer 2025, new york city)
             </span>
-            &rarr; working on infra + experimentation tools. if you're in NYC
-            hit me up.
+            &rarr; working on infra + experimentation tools. if you&apos;re in
+            NYC hit me up.
           </li>
           <li>
             <span className="font-semibold">
@@ -80,8 +80,8 @@ export default function Home() {
               <span className="text-teal-400">UNC CS + Social Good</span>
             </span>{" "}
             &rarr; overhauled and taught dev curriculum to new students and org
-            members, shaped org's technical and strategic direction closely with
-            presidents.
+            members, shaped org&apos;s technical and strategic direction closely
+            with presidents.
           </li>
           <li>
             <span className="font-semibold">
