@@ -16,9 +16,7 @@ const projects_page = () => {
         <div className="flex lg:min-h-screen flex-col ml-5 mr-5 lg:items-start lg:mr-20 lg:ml-0 lg:mt-10 lg:mb-10">
           <div className="text-3xl font-normal underline">Internships</div>
           <p className="mt-5">
-            <span className="text-xl lg:text-2xl text-green-500">
-              -&gt; MongoDB
-            </span>
+            <span className="text-xl lg:text-2xl text-green-500">MongoDB</span>
             <span className="text-md lg:text-lg text-black">
               {" - Jun 2025 - Aug 2025"}
             </span>
@@ -26,7 +24,7 @@ const projects_page = () => {
           <p className="mt-5">{"We'll see!"}</p>
           <p className="mt-5">
             <span className="text-xl lg:text-2xl text-purple-700">
-              -&gt; Momentus Technologies
+              Momentus Technologies
             </span>
             <span className="text-md lg:text-lg text-black">
               {" - May 2024 - Aug 2024"}
@@ -39,7 +37,7 @@ const projects_page = () => {
           </p>
           <p className="mt-5">
             <span className="text-xl lg:text-2xl text-orange-400">
-              -&gt; Tradepending
+              Tradepending
             </span>
             <span className="text-md lg:text-lg text-black">
               {" - May 2023 - Aug 2023"}
@@ -53,7 +51,7 @@ const projects_page = () => {
           <div className="text-3xl font-normal underline mt-5">Research</div>
           <p className="mt-5">
             <span className="text-xl lg:text-2xl text-sky-300">
-              -&gt; AURA Project
+              AURA Project
               <span className="text-base text-gray-400">
                 : Deep Learning, WI-FI CSI, Next.js, MongoDB
               </span>
@@ -101,7 +99,7 @@ const projects_page = () => {
 
           <p className="mt-5">
             <span className="text-xl lg:text-2xl text-sky-300">
-              -&gt; Mentored Research
+              Mentored Research
               <span className="text-base text-gray-400">
                 : Agents, LLMs, Prompt Engineering, Javascript
               </span>
@@ -140,30 +138,27 @@ const projects_page = () => {
           </div>
           <section className="border-2 border-black rounded-xl w-full p-4 mb-5">
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-teal-300 w-full">
-              <p>-&gt; CS + Social Good</p>
+              <p>CS + Social Good</p>
               <p className="text-lg text-gray-400 ml-5">
-                Education Team TA, Developer -&gt; CSSG Labs -&gt; VP of
-                Education -&gt; President
+                Education Team TA, Developer CSSG Labs VP of Education President
               </p>
             </div>
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-yellow-400 mt-5 w-full">
-              <p>-&gt; Carolina Choir</p>
+              <p>Carolina Choir</p>
               <p className="text-lg text-gray-400 ml-5">
-                Outreach/Publicity Lead -&gt; Tech Lead
+                Outreach/Publicity Lead Tech Lead
               </p>
             </div>
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-gray-400 mt-5 w-full line-through">
-              <p>-&gt; ACM Carolina</p>
-              <p className="text-lg text-gray-400 ml-5">
-                Member -&gt; Treasurer
-              </p>
+              <p>ACM Carolina</p>
+              <p className="text-lg text-gray-400 ml-5">Member Treasurer</p>
             </div>
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-gray-400 mt-5 w-full line-through">
-              <p>-&gt; Undergraduate Student Government</p>
+              <p>Undergraduate Student Government</p>
               <p className="text-lg text-gray-400 ml-5">General Staff</p>
             </div>
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-gray-400 mt-5 w-full line-through">
-              <p>-&gt; Biokind UNC</p>
+              <p>Biokind UNC</p>
               <p className="text-lg text-gray-400 ml-5">
                 Founding Data Analyst
               </p>
@@ -172,7 +167,7 @@ const projects_page = () => {
           <div className="text-3xl font-normal underline">Projects</div>
           <p className="mt-5">
             <span className="text-xl lg:text-2xl text-green-500">
-              -&gt; RiceSavers
+              RiceSavers
             </span>
             <span className="text-base">
               : Python, Tensorflow, Flask, HTML, CSS, Javascript
