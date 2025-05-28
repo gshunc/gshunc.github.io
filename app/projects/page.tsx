@@ -21,7 +21,11 @@ const projects_page = () => {
               {" - Jun 2025 - Aug 2025"}
             </span>
           </p>
-          <p className="mt-5">{"We'll see!"}</p>
+          <p className="mt-5">
+            {
+              "Working on the Atlas Growth Platforms team, building scalable A/B and CMAB testing infra for MongoDB Atlas."
+            }
+          </p>
           <p className="mt-5">
             <span className="text-xl lg:text-2xl text-purple-700">
               Momentus Technologies
@@ -140,18 +144,21 @@ const projects_page = () => {
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-teal-300 w-full">
               <p>CS + Social Good</p>
               <p className="text-lg text-gray-400 ml-5">
-                Education Team TA, Developer CSSG Labs VP of Education President
+                Developer -&gt; Education Team TA -&gt; Cofounder CSSG
+                Labs/Strategy Lead -&gt; VP of Education -&gt; President
               </p>
             </div>
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-yellow-400 mt-5 w-full">
               <p>Carolina Choir</p>
               <p className="text-lg text-gray-400 ml-5">
-                Outreach/Publicity Lead Tech Lead
+                Outreach/Publicity Lead -&gt; Tech Lead
               </p>
             </div>
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-gray-400 mt-5 w-full line-through">
               <p>ACM Carolina</p>
-              <p className="text-lg text-gray-400 ml-5">Member Treasurer</p>
+              <p className="text-lg text-gray-400 ml-5">
+                Member -&gt; Treasurer
+              </p>
             </div>
             <div className="flex flex-row items-end justify-between text-xl lg:text-xl text-gray-400 mt-5 w-full line-through">
               <p>Undergraduate Student Government</p>
@@ -165,6 +172,35 @@ const projects_page = () => {
             </div>
           </section>
           <div className="text-3xl font-normal underline">Projects</div>
+          <p className="mt-5">
+            <span className="text-xl lg:text-2xl text-orange-500">
+              MathRouter
+            </span>
+            <span className="text-base">
+              : Python, Tensorflow, Numpy, OpenAI API, Gemini API, Neural
+              Networks
+            </span>
+          </p>
+          <p className="mt-5">
+            {
+              "MathRouter is a project completed for my machine learning class at UNC. Our goal was to create a router system to determine which type of model is best suited for solving certain difficulty tiers of math problems. Our motivation was to determine how we could save users money by using the cheapest model capable of solving a given problem. We used a combination of neural networks and OpenAI's API to determine the best model for the job. We also used a combination of numpy and tensorflow to train the models and evaluate their performance. Processing over 5000 problems, solved and judged using LLMs with a custom rubric with structured output, we were able to train a neural network classifier to determine to which tier of difficulty a given problem should be assigned (between unsolvable, GPT 4.1-mini, GPT 4.1, and o4-mini). We also did cost analysis to determine savings based on the model choice."
+            }
+          </p>
+          <div className="mt-5 self-center flex gap-5 justify-center">
+            <iframe
+              src="/562/COMP562 Project.pdf"
+              width="400px"
+              height="600px"
+              className="border-2 border-black rounded-xl"
+            />
+            <Image
+              src="/562/flowchart.jpeg"
+              alt="MathRouter"
+              width={600}
+              height={400}
+              className="border-2 border-black rounded-xl p-10"
+            />
+          </div>
           <p className="mt-5">
             <span className="text-xl lg:text-2xl text-green-500">
               RiceSavers
