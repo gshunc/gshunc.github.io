@@ -2,15 +2,16 @@
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Link from "next/link";
+import { motion } from "motion/react";
 config.autoAddCss = false;
 
 export default function Home() {
   return (
     <div className="lg:ml-20 lg:mr-20 mr-5 ml-5 flex flex-col lg:block lg:ml-0 lg:mt-5 scroll-auto lg:mr-20 pb-5 pt-20">
-      <div className="self-end w-fit font-semibold text-3xl">
+      <div className="self-end w-fit font-semibold text-3xl animate-typing">
         George Harris.
       </div>
-      <p className="text-lg text-center lg:text-left mt-5 mb-5 w-50">
+      <p className="text-center lg:text-left mt-5 mb-5 w-50">
         {"I study computer science and math at "}
         <span className="font-extrabold text-sky-300">{"UNC Chapel Hill"}</span>
         {". I'm originally from "}
@@ -40,7 +41,7 @@ export default function Home() {
         </a>
         {" page."}
       </p>
-      <p className="text-center lg:text-left text-lg mt-10 mb-5 w-50">
+      <p className="text-center lg:text-left mt-10 mb-5 w-50">
         {
           "As I briefly outlined above, I'm professionally, but also personally, interested in many aspects of tech, especially in entrepreneurship and innovation. I am at my best when I am a part of or leading a high-functioning team, but I also like to build on my own. You can take a deeper dive into what I'm working on in the "
         }
@@ -53,18 +54,27 @@ export default function Home() {
 
         {" page."}
       </p>
-      <div className="text-center lg:text-left text-lg mt-10 mb-5 w-50">
+      <div className="text-center lg:text-left mt-10 mb-5 w-50">
         <p className="font-extrabold mb-1">{"Recently:"}</p>
-        <ul>
-          <li>
+        <motion.ul
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.25, ease: "easeInOut" }}
+        >
+          <motion.li>
             <span className="font-semibold">
               swe intern @ <span className="text-green-500">MongoDB</span>{" "}
               (summer 2025, new york city)
             </span>
             &rarr; working on infra + experimentation tools. if you&apos;re in
             NYC hit me up.
-          </li>
-          <li>
+          </motion.li>
+          <motion.li>
             <span className="font-semibold">
               research @{" "}
               <span className="text-blue-500">
@@ -73,25 +83,25 @@ export default function Home() {
             </span>{" "}
             &rarr; deep learning + wifi signal analysis; presented agent-based
             LLM work at Sensys 2025 (CPS-IoT Week).
-          </li>
-          <li>
+          </motion.li>
+          <motion.li>
             <span className="font-semibold">
               president (fmr vp of education) @{" "}
               <span className="text-teal-400">UNC CS + Social Good</span>
             </span>{" "}
             &rarr; overhauled and taught dev curriculum to new students and org
             members, shaped org&apos;s technical and strategic direction closely
-            with presidents.
-          </li>
-          <li>
+            with former presidents.
+          </motion.li>
+          <motion.li>
             <span className="font-semibold">
               co-founded a <span className="text-yellow-400">band</span> +
               performing locally
             </span>{" "}
             &rarr; singing vocals for “Pollen”, started with my close friends;
             done a few small shows, one of the most meaningful parts of life rn.
-          </li>
-          <li>
+          </motion.li>
+          <motion.li>
             <span className="font-semibold">
               spent last fall abroad in{" "}
               <span className="text-red-500">Madrid</span> @ UC3M
@@ -99,16 +109,16 @@ export default function Home() {
             &rarr; somehow passed all my cs + math classes. lived in a student
             res w/ communal kitchen; cooked for friends, hit 8 countries, too
             many clubs, learned some spanish.
-          </li>
-          <li>
+          </motion.li>
+          <motion.li>
             <span className="font-semibold">trying to read and write more</span>{" "}
             &rarr; check out my{" "}
             <Link className="underline" href="/reading-list">
               reading list
             </Link>
             . reading mostly about philosophy, history, and math.
-          </li>
-        </ul>
+          </motion.li>
+        </motion.ul>
       </div>
     </div>
   );

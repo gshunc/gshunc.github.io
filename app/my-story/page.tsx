@@ -7,10 +7,8 @@ config.autoAddCss = false;
 
 const story_page = () => {
   return (
-    <main className="flex min-h-full flex-col ml-5 mr-5 lg:items-start lg:mr-20 lg:ml-0 lg:mt-10">
-      <p className="text-2xl lg:text-5xl font-semibold underline mt-5">
-        Who am I?
-      </p>
+    <main className="flex min-h-full flex-col ml-5 mr-5 lg:items-start lg:mr-20 lg:ml-20 lg:pb-5 lg:pt-20">
+      <p className="text-2xl lg:text-3xl font-semibold mt-5">Who am I?</p>
       <p className="mt-5 mb-10">
         {
           "I was born October 15th, 2003 in St. Louis, Missouri. I proceeded to grow up a lot (still working on this). I attended Parkway Central High School, where I was involved in a number of organizations (mostly after realizing I should do this for college), serving as Senior Class President and Swim Captain, as well as Secretary of Coding Colts. I had the opportunity to give our Graduation Speech, pictured below."

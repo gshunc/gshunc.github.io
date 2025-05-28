@@ -8,9 +8,9 @@ import { books } from "@/app/data/books/books";
 
 const ReadingList = () => {
   return (
-    <main className="min-h-screen flex flex-col items-start justify-between pt-10 scroll-smooth">
+    <main className="min-h-screen flex flex-col items-start justify-between scroll-smooth lg:ml-20 lg:mr-20 pb-5 pt-20">
       <div className="flex flex-col flex-grow">
-        <p className="text-2xl lg:text-5xl font-semibold underline mt-5 mb-10">
+        <p className="text-2xl lg:text-3xl font-semibold mt-5 mb-10">
           Reading List
         </p>
         <section className="flex flex-col flex-grow scroll-smooth overflow-auto">
