@@ -17,22 +17,8 @@ export default function Home() {
         {". I'm originally from "}
         <span className="font-extrabold text-red-500">{"St. Louis, MO"}</span>
         {
-          ", and have a professional passion for tech and social good, AI research, and entrepreneurship. Outside of that, I'm interested in "
+          ", and have a professional passion for tech and social good, AI research, and entrepreneurship. Outside of that, I'm interested in history, philosophy, cooking, college basketball, fitness, and singing. Learn more about me on the "
         }
-        <span className="font-bold text-red-500">{"history"}</span>
-        {","}
-        <span className="font-bold text-blue-600"> {"philosophy"}</span>
-        {","}
-        <span className="font-bold text-orange-900"> {"cooking"}</span>
-        {","}
-        <span className="font-bold text-orange-500">
-          {" college basketball"}
-        </span>
-        {", "}
-        <span className="font-bold text-violet-700"> {"fitness"}</span>
-        {", and"}
-        <span className="font-bold text-yellow-400"> {"singing"}</span>
-        {". Learn more about me on the "}
         <a href="/my-story" className="font-extrabold underline group">
           {"My Story"}
           <span className="hidden lg:inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
@@ -69,10 +55,11 @@ export default function Home() {
           <motion.li>
             <span className="font-semibold">
               swe intern @ <span className="text-green-500">MongoDB</span>{" "}
-              (summer 2025, new york city)
+              (summer 2025, new york city){" "}
             </span>
-            &rarr; working on infra + experimentation tools. if you&apos;re in
-            NYC hit me up.
+            &rarr; working on infra on the atlas growth platforms team, working
+            on testing infrastructure for integrations with well known
+            companies.
           </motion.li>
           <motion.li>
             <span className="font-semibold">
@@ -86,7 +73,7 @@ export default function Home() {
           </motion.li>
           <motion.li>
             <span className="font-semibold">
-              president (fmr vp of education) @{" "}
+              president (former vp of education) @{" "}
               <span className="text-teal-400">UNC CS + Social Good</span>
             </span>{" "}
             &rarr; overhauled and taught dev curriculum to new students and org
@@ -98,8 +85,9 @@ export default function Home() {
               co-founded a <span className="text-yellow-400">band</span> +
               performing locally
             </span>{" "}
-            &rarr; singing vocals for “Pollen”, started with my close friends;
-            done a few small shows, one of the most meaningful parts of life rn.
+            &rarr; I sing for “Pollen”, a band I started with my close friends;
+            we&apos;ve done a few small shows, one of the most meaningful parts
+            of life rn.
           </motion.li>
           <motion.li>
             <span className="font-semibold">
@@ -107,8 +95,8 @@ export default function Home() {
               <span className="text-red-500">Madrid</span> @ UC3M
             </span>{" "}
             &rarr; somehow passed all my cs + math classes. lived in a student
-            res w/ communal kitchen; cooked for friends, hit 8 countries, too
-            many clubs, learned some spanish.
+            residence w/ communal kitchen; cooked for friends, went to 8
+            countries, went to clubs, learned some spanish.
           </motion.li>
           <motion.li>
             <span className="font-semibold">trying to read and write more</span>{" "}
