@@ -173,7 +173,10 @@ const projects_page = () => {
           </section>
           <div className="text-3xl font-normal underline">Projects</div>
           <p className="mt-5">
-            <span className="text-xl lg:text-xl text-orange-500">
+            <span
+              className="text-xl lg:text-xl text-orange-500"
+              id="MathRouter"
+            >
               MathRouter
             </span>
             <span className="text-base">
