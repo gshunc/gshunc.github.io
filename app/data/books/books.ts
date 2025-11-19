@@ -1,4 +1,4 @@
-interface Book {
+export interface Book {
   title: string;
   author: string;
   pros: string | null;
@@ -6,10 +6,11 @@ interface Book {
   image_src: string;
   image_alt: string;
   is_favorite: boolean;
+  category: "Philosophy & Politics" | "History & Biography" | "Business & Economics" | "Science & Society" | "Arts & Living";
 }
 
 export const books: Array<Book> = [
-  // Finished books (unchanged)
+  // Finished books (existing entries, unchanged)
   {
     title: "Meditations",
     author: "Marcus Aurelius",
@@ -18,6 +19,7 @@ export const books: Array<Book> = [
     image_src: "/books/meditations.jpg",
     image_alt: "Meditations Cover",
     is_favorite: false,
+    category: "Philosophy & Politics",
   },
   {
     title: "Systems of Survival",
@@ -27,6 +29,7 @@ export const books: Array<Book> = [
     image_src: "/books/systems_of_survival.jpg",
     image_alt: "Systems of Survival Cover",
     is_favorite: true,
+    category: "Philosophy & Politics",
   },
   {
     title: "Commentaries on the Gallic and Civil Wars",
@@ -36,6 +39,7 @@ export const books: Array<Book> = [
     image_src: "/books/caesar_commentaries.jpg",
     image_alt: "Commentaries on the Gallic and Civil Wars Cover",
     is_favorite: false,
+    category: "History & Biography",
   },
   {
     title: "The Prince",
@@ -45,6 +49,7 @@ export const books: Array<Book> = [
     image_src: "/books/the_prince.jpg",
     image_alt: "The Prince Cover",
     is_favorite: false,
+    category: "Philosophy & Politics",
   },
   {
     title: "Republic",
@@ -54,6 +59,7 @@ export const books: Array<Book> = [
     image_src: "/books/republic.jpg",
     image_alt: "Republic Cover",
     is_favorite: false,
+    category: "Philosophy & Politics",
   },
   {
     title: "The Political Philosophy of Alexander Hamilton",
@@ -63,5 +69,118 @@ export const books: Array<Book> = [
     image_src: "/books/hamilton_philosophy.jpg",
     image_alt: "The Political Philosophy of Alexander Hamilton Cover",
     is_favorite: false,
+    category: "History & Biography",
   },
+
+  // Additional books visible on the shelf but not yet in your list
+  {
+    title: "Modern Philosophy: An Anthology of Primary Sources",
+    author: "Roger Ariew; Eric Watkins",
+    pros: null,
+    cons: null,
+    image_src: "https://covers.openlibrary.org/b/isbn/9781624668050-L.jpg",
+    image_alt: "Modern Philosophy Anthology Cover",
+    is_favorite: false,
+    category: "Philosophy & Politics",
+  },
+  {
+    title: "Democracy in America",
+    author: "Alexis de Tocqueville",
+    pros: null,
+    cons: null,
+    image_src: "/books/democracy_in_america.jpg",
+    image_alt: "Democracy in America Cover",
+    is_favorite: false,
+    category: "Philosophy & Politics",
+  },
+  {
+    title: "What Art Does",
+    author: "Brian Eno; Bette Adriaanse",
+    pros: null,
+    cons: null,
+    image_src: "https://covers.openlibrary.org/b/isbn/9780571395514-L.jpg",
+    image_alt: "What Art Does Cover",
+    is_favorite: false,
+    category: "Arts & Living",
+  },
+  {
+    title: "Corruptible: Who Gets Power and How It Changes Us",
+    author: "Brian Klaas",
+    pros: null,
+    cons: null,
+    image_src: "https://covers.openlibrary.org/b/isbn/9781982154103-L.jpg",
+    image_alt: "Corruptible Cover",
+    is_favorite: false,
+    category: "Science & Society",
+  },
+  {
+    title: "Stop Saving the Planet!: An Environmentalist Manifesto",
+    author: "Jenny Price",
+    pros: null,
+    cons: null,
+    image_src: "https://covers.openlibrary.org/b/isbn/9780393540871-L.jpg",
+    image_alt: "Stop Saving the Planet Cover",
+    is_favorite: false,
+    category: "Science & Society",
+  },
+  {
+    title: "The Concept of the Corporation",
+    author: "Peter F. Drucker",
+    pros: null,
+    cons: null,
+    image_src: "https://covers.openlibrary.org/b/isbn/9781560006251-L.jpg",
+    image_alt: "The Concept of the Corporation Cover",
+    is_favorite: false,
+    category: "Business & Economics",
+  },
+  {
+    title: "CEO Excellence",
+    author: "Carolyn Dewar; Scott Keller; Vikram Malhotra",
+    pros: null,
+    cons: null,
+    image_src: "/books/ceo_excellence.jpg",
+    image_alt: "CEO Excellence Cover",
+    is_favorite: false,
+    category: "Business & Economics",
+  },
+  {
+    title: "John Adams",
+    author: "David McCullough",
+    pros: null,
+    cons: null,
+    image_src: "/books/john_adams.jpg",
+    image_alt: "John Adams Cover",
+    is_favorite: false,
+    category: "History & Biography",
+  },
+  {
+    title: "The End of the Suburbs: Where the American Dream Is Moving",
+    author: "Leigh Gallagher",
+    pros: null,
+    cons: null,
+    image_src: "https://covers.openlibrary.org/b/isbn/9781591845256-L.jpg",
+    image_alt: "The End of the Suburbs Cover",
+    is_favorite: false,
+    category: "Science & Society",
+  },
+  {
+    title: "A Brief History of Time",
+    author: "Stephen Hawking",
+    pros: null,
+    cons: null,
+    image_src: "https://covers.openlibrary.org/b/isbn/9780553109535-L.jpg",
+    image_alt: "A Brief History of Time Cover",
+    is_favorite: false,
+    category: "Science & Society",
+  },
+  {
+    title: "Salt, Fat, Acid, Heat: Mastering the Elements of Good Cooking",
+    author: "Samin Nosrat",
+    pros: null,
+    cons: null,
+    image_src: "https://covers.openlibrary.org/b/isbn/9781476753836-L.jpg",
+    image_alt: "Salt, Fat, Acid, Heat Cover",
+    is_favorite: false,
+    category: "Arts & Living",
+  }
 ];
