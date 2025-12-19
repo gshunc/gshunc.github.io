@@ -2,10 +2,18 @@
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
+import { useState } from "react";
 config.autoAddCss = false;
 
 export default function Home() {
+  const [visiblePhotos, setVisiblePhotos] = useState<Record<string, boolean>>({});
+
+  const togglePhotos = (key: string) => {
+    setVisiblePhotos((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
   return (
     <div className="lg:ml-20 lg:mr-20 mr-5 ml-5 flex flex-col lg:block lg:ml-0 lg:mt-5 scroll-auto lg:mr-20 pb-5 pt-20">
       <div className="self-end w-fit font-semibold text-3xl animate-typing">
@@ -91,17 +99,106 @@ export default function Home() {
               swe intern @ <span className="text-green-500">MongoDB</span>{" "}
             </span>
             &rarr; working on the Atlas Growth Platforms team, building load
-            testing infrastructure and testing tool for a new integration with
-            Vercel.
+            testing infrastructure and testing tool for a new{" "}
+            <Link
+              className="underline"
+              href="https://vercel.com/marketplace/mongodbatlas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>integration with Vercel</span>
+            </Link>{" "}
+            <button
+              onClick={() => togglePhotos("mongodb")}
+              className="ml-1 text-gray-400 text-sm underline hover:text-gray-300 transition-colors"
+            >
+              {visiblePhotos["mongodb"] ? "hide photos" : "see photos"}
+            </button>
+            <AnimatePresence>
+              {visiblePhotos["mongodb"] && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-3 mb-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+                  <Image
+                    src="/homepage/mongodb/nyc1.JPG"
+                    alt="MongoDB internship"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                  <Image
+                    src="/homepage/mongodb/nyc2.jpg"
+                    alt="MongoDB NYC office"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                  <Image
+                    src="/homepage/mongodb/nyc3.jpg"
+                    alt="MongoDB team"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                  <Image
+                    src="/homepage/mongodb/nyc4.jpg"
+                    alt="NYC moments"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.li>
           <motion.li>
             <span className="font-semibold">
-              president @{" "}
+              co-president @{" "}
               <span className="text-teal-400">UNC CS + Social Good</span>
             </span>{" "}
-            &rarr; overhauled and taught dev curriculum to new students and org
-            members, shaped org&apos;s technical and strategic direction closely
-            with former presidents.
+            &rarr; running a nonprofit student org to build technical solutions
+            for other nonprofits. helped reorganize engineering team and
+            introduced new programs to mentor members. greatly increased
+            velocity, oversaw 6 new projects over the course of the year. built
+            a{" "}
+            <Link
+              className="underline"
+              href="https://cssgunc.org"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>new website</span>
+            </Link>{" "}
+            for the org.
+            <button
+              onClick={() => togglePhotos("cssg")}
+              className="ml-1 text-gray-400 text-sm underline hover:text-gray-300 transition-colors"
+            >
+              {visiblePhotos["cssg"] ? "hide photos" : "see photos"}
+            </button>
+            <AnimatePresence>
+              {visiblePhotos["cssg"] && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-3 mb-3"
+                >
+                  <Image
+                    src="/homepage/cssg/cssg1.jpg"
+                    alt="CSSG team"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.li>
           <motion.li>
             <span className="font-semibold">
@@ -110,16 +207,78 @@ export default function Home() {
                 UNC Embedded Intelligence Lab
               </span>
             </span>{" "}
-            &rarr; deep learning + wifi signal analysis; presented agent-based
-            LLM work at Sensys 2025 (CPS-IoT Week).
+            &rarr; presented mobile gaming agent and llm mobile device control
+            research at Sensys 2025 (CPS-IoT Week) in Irvine, CA.
+            <button
+              onClick={() => togglePhotos("irvine")}
+              className="ml-1 text-gray-400 text-sm underline hover:text-gray-300 transition-colors"
+            >
+              {visiblePhotos["irvine"] ? "hide photos" : "see photos"}
+            </button>
+            <AnimatePresence>
+              {visiblePhotos["irvine"] && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-3 mb-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+                  <Image
+                    src="/homepage/irvine/irvine1.jpg"
+                    alt="Sensys presentation"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                  <Image
+                    src="/homepage/irvine/irvine2.jpg"
+                    alt="Irvine conference"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.li>
           <motion.li>
             <span className="font-semibold">
               co-founded a <span className="text-yellow-400">band</span>
             </span>{" "}
             &rarr; I sing for <span className="text-yellow-400">Pollen</span>, a
-            band I started with my close friends. band is growing, we'll be
-            playing many more shows this spring.
+            band I started with my close friends. we'll be playing many more
+            shows this spring.
+            <button
+              onClick={() => togglePhotos("pollen")}
+              className="ml-1 text-gray-400 text-sm underline hover:text-gray-300 transition-colors"
+            >
+              {visiblePhotos["pollen"] ? "hide photos" : "see photos"}
+            </button>
+            <AnimatePresence>
+              {visiblePhotos["pollen"] && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-3 mb-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+                  <Image
+                    src="/homepage/pollen/pollen1.JPG"
+                    alt="Pollen band photo"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                  <video
+                    controls
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                    src="/homepage/pollen/pollenMovie.MOV"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.li>
           <motion.li>
             <span className="font-semibold">
@@ -129,6 +288,45 @@ export default function Home() {
             &rarr; somehow passed all my cs + math classes. lived in a student
             residence w/ communal kitchen; cooked for friends, went to 8
             countries, learned some spanish.
+            <button
+              onClick={() => togglePhotos("madrid")}
+              className="ml-1 text-gray-400 text-sm underline hover:text-gray-300 transition-colors"
+            >
+              {visiblePhotos["madrid"] ? "hide photos" : "see photos"}
+            </button>
+            <AnimatePresence>
+              {visiblePhotos["madrid"] && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-3 mb-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+                  <Image
+                    src="/homepage/madrid/madrid1.JPG"
+                    alt="Madrid trip"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                  <Image
+                    src="/homepage/madrid/madrid2.jpg"
+                    alt="Spain travel"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                  <Image
+                    src="/homepage/madrid/madrid3.jpg"
+                    alt="Madrid memories"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto max-h-64 object-cover rounded-lg"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.li>
           <motion.li>
             <span className="font-semibold">trying to read and write more</span>{" "}
