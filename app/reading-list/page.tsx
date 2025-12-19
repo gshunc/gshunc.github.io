@@ -1,13 +1,9 @@
 "use client";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import ReadingDropdown from "../components/ReadingDropdown";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { books, Book } from "@/app/data/books/books";
 import { useState } from "react";
 import BookModal from "../components/BookModal";
-
+import Image from "next/image";
 
 const ReadingList = () => {
   const [selectedBook, setSelectedBook] = useState<Book | null>(null);
@@ -47,7 +43,7 @@ const ReadingList = () => {
         <h1 className="text-4xl lg:text-5xl font-bold mt-10 mb-16 text-center">
           My Library
         </h1>
-        
+
         {categories.map((category) => {
           const categoryBooks = booksByCategory[category];
           if (!categoryBooks) return null;
@@ -59,33 +55,38 @@ const ReadingList = () => {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
                 {categoryBooks.map((book, index) => {
-                  const uniqueId = `${book.title.replace(/\s+/g, "-")}-${index}`;
+                  const uniqueId = `${book.title.replace(
+                    /\s+/g,
+                    "-"
+                  )}-${index}`;
                   return (
-                    <div 
-                      key={uniqueId} 
+                    <div
+                      key={uniqueId}
                       className="flex flex-col items-center group perspective-1000 cursor-pointer"
                       onClick={() => handleBookClick(book)}
                     >
                       <div className="relative w-32 h-48 md:w-40 md:h-60 shadow-xl transition-transform duration-300 transform group-hover:-translate-y-2 group-hover:shadow-2xl rounded-r-md rounded-l-sm bg-white">
                         {/* Book Spine/Cover Effect */}
                         <div className="absolute inset-0 bg-gray-200 rounded-r-md rounded-l-sm overflow-hidden border-l-4 border-l-gray-800">
-                            {book.image_src ? (
-                                <img 
-                                    src={book.image_src} 
-                                    alt={book.image_alt}
-                                    className="w-full h-full object-cover"
-                                />
-                            ) : (
-                                <div className="w-full h-full flex items-center justify-center bg-gray-700 text-white p-2 text-center text-xs">
-                                    {book.title}
-                                </div>
-                            )}
+                          {book.image_src ? (
+                            <Image
+                              src={book.image_src}
+                              alt={book.image_alt}
+                              width={128}
+                              height={192}
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center bg-gray-700 text-white p-2 text-center text-xs">
+                              {book.title}
+                            </div>
+                          )}
                         </div>
-                        
+
                         {/* Hover Overlay for Details (Simple version) */}
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 rounded-r-md"></div>
                       </div>
-                      
+
                       <div className="mt-4 text-center max-w-[160px]">
                         <h3 className="font-bold text-sm md:text-base leading-tight mb-1">
                           {book.title}
@@ -98,20 +99,16 @@ const ReadingList = () => {
                   );
                 })}
               </div>
-              {/* Shelf Graphic */}
-              <div className="h-4 bg-gray-700 w-full mt-2 shadow-md rounded-sm relative">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gray-600 opacity-50"></div>
-              </div>
             </section>
           );
         })}
       </div>
 
       {/* Book Modal */}
-      <BookModal 
-        book={selectedBook} 
-        isOpen={isModalOpen} 
-        onClose={handleCloseModal} 
+      <BookModal
+        book={selectedBook}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
       />
     </main>
   );
