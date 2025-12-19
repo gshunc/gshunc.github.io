@@ -54,12 +54,54 @@ export default function Home() {
         >
           <motion.li>
             <span className="font-semibold">
-              swe intern @ <span className="text-green-500">MongoDB</span>{" "}
-              (summer 2025, new york city){" "}
+              <span className="">research engineering</span> @{" "}
+              <Link
+                href="https://github.com/aiming-lab"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                <span className="text-sky-300"> AIMING Lab at UNC </span>
+              </Link>
             </span>
-            &rarr; working on infra on the atlas growth platforms team, working
-            on testing infrastructure for integrations with well known
-            companies.
+            &rarr; building an automated dataset curation platform to
+            crowdsource advanced mathematics problems, reasoning traces, and
+            solutions, check for quality, correctness and duplication, and
+            automatically benchmark leading LLMs against them.
+          </motion.li>
+          <motion.li>
+            <span className="font-semibold">
+              <span className="">donating my time</span> @{" "}
+              <Link
+                href="https://www.onedayhealth.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                <span className="text-orange-500"> OneDay Health </span>
+              </Link>
+            </span>
+            &rarr; building a distributed agent evaluaton pipeline to help
+            deploy a healthcare agent. scaling medical access across 45 field
+            hospitals and hundreds of thousands of patients across Northern
+            Uganda.
+          </motion.li>
+          <motion.li>
+            <span className="font-semibold">
+              swe intern @ <span className="text-green-500">MongoDB</span>{" "}
+            </span>
+            &rarr; working on the Atlas Growth Platforms team, building load
+            testing infrastructure and testing tool for a new integration with
+            Vercel.
+          </motion.li>
+          <motion.li>
+            <span className="font-semibold">
+              president @{" "}
+              <span className="text-teal-400">UNC CS + Social Good</span>
+            </span>{" "}
+            &rarr; overhauled and taught dev curriculum to new students and org
+            members, shaped org&apos;s technical and strategic direction closely
+            with former presidents.
           </motion.li>
           <motion.li>
             <span className="font-semibold">
@@ -73,21 +115,11 @@ export default function Home() {
           </motion.li>
           <motion.li>
             <span className="font-semibold">
-              president (former vp of education) @{" "}
-              <span className="text-teal-400">UNC CS + Social Good</span>
+              co-founded a <span className="text-yellow-400">band</span>
             </span>{" "}
-            &rarr; overhauled and taught dev curriculum to new students and org
-            members, shaped org&apos;s technical and strategic direction closely
-            with former presidents.
-          </motion.li>
-          <motion.li>
-            <span className="font-semibold">
-              co-founded a <span className="text-yellow-400">band</span> +
-              performing locally
-            </span>{" "}
-            &rarr; I sing for “Pollen”, a band I started with my close friends;
-            we&apos;ve done a few small shows, one of the most meaningful parts
-            of life rn.
+            &rarr; I sing for <span className="text-yellow-400">Pollen</span>, a
+            band I started with my close friends. band is growing, we'll be
+            playing many more shows this spring.
           </motion.li>
           <motion.li>
             <span className="font-semibold">
@@ -96,7 +128,7 @@ export default function Home() {
             </span>{" "}
             &rarr; somehow passed all my cs + math classes. lived in a student
             residence w/ communal kitchen; cooked for friends, went to 8
-            countries, went to clubs, learned some spanish.
+            countries, learned some spanish.
           </motion.li>
           <motion.li>
             <span className="font-semibold">trying to read and write more</span>{" "}
